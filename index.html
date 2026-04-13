@@ -418,6 +418,17 @@ select {
 </style>
 </head>
 
+<!-- ============================================================
+     INIZIO MODIFICA - Sequenza corretta blocchi
+     File: /index.html
+     Sezione: <body>
+     Descrizione:
+         - Riordino dei blocchi per sequenza logica
+         - Aggiunta chiusura </div> mancante
+         - Nessuna modifica alla logica JS
+     Data: 2026-04-13 22:48
+     ============================================================ -->
+
 <body>
 <div id="app-container">
 
@@ -430,45 +441,52 @@ select {
     <button onclick="cambiaGruppo('OUT_CABINA', this)">OUT_CABINA</button>
 </div>
 
+<!-- 1) SELEZIONA PARAMETRO -->
 <h2 id="titolo_parametri">SELEZIONA PARAMETRO –</h2>
 <select id="menu" class="select-box"></select>
 
-<div id="bloccoB">
-<h2 id="titoloB"></h2>
-<div id="textB" class="text-box"></div>
-<div id="btnB" class="buttons-row"></div>
-</div>
-
+<!-- 2) SELEZIONA FUNZIONE -->
 <h2 id="titoloFunzione">SELEZIONA FUNZIONE</h2>
-
-
 <div id="bloccoValore">
     <select id="menuValore" class="select-box">
         <option>—</option>
     </select>
+    <div id="btnValore" class="buttons-row"></div>
+</div> <!-- ← MANCAVA QUESTA CHIUSURA -->
 
-   <div id="btnValore" class="buttons-row"></div>
-
-
-<div id="bloccoC">
-<h2 id="titoloC"></h2>
-<div id="textC" class="text-box"></div>
-<div id="btnC" class="buttons-row"></div>
+<!-- 3) PARAMETRO -->
+<div id="bloccoB">
+    <h2 id="titoloB"></h2>
+    <div id="textB" class="text-box"></div>
+    <div id="btnB" class="buttons-row"></div>
 </div>
 
+<!-- 4) DEF -->
+<div id="bloccoC">
+    <h2 id="titoloC"></h2>
+    <div id="textC" class="text-box"></div>
+    <div id="btnC" class="buttons-row"></div>
+</div>
+
+<!-- 5) Altri blocchi -->
 <div id="bloccoD">
-<h2 id="titoloD"></h2>
-<div id="textD" class="text-box"></div>
-<div id="btnD" class="buttons-row"></div>
+    <h2 id="titoloD"></h2>
+    <div id="textD" class="text-box"></div>
+    <div id="btnD" class="buttons-row"></div>
 </div>
 
 <div id="bloccoE">
-<h2 id="titoloE"></h2>
-<div id="textE" class="text-box"></div>
-<div id="btnE" class="buttons-row"></div>
+    <h2 id="titoloE"></h2>
+    <div id="textE" class="text-box"></div>
+    <div id="btnE" class="buttons-row"></div>
 </div>
 
-<script>
+<!-- ============================
+     FINE MODIFICA - Sequenza corretta blocchi
+     File: /index.html
+     Data: 2026-04-13 22:48
+     ============================ -->
+	</sxript>
 /* ======== FUNZIONE PER ESTRARRE L’ID ======== */
 function estraiID(str) {
     if (!str) return "";
