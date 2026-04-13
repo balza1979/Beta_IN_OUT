@@ -155,6 +155,223 @@ h2 {
     color: white;
 }
 
+/* ============================================================
+   INIZIO MODIFICA - Modalità APP Avanzata
+   File: /index.html
+   Sezione: <style>
+   Descrizione:
+       - Modalità APP per smartphone e tablet
+       - Attivazione su:
+            * max-width 900px
+            * device-width < 1280px
+            * high DPI (device pixel ratio >= 2)
+       - Zoom 210%
+       - Pulsanti più grandi
+       - Tendine più alte
+       - Testo più leggibile
+   Data: 2026-04-13 21:31
+   ============================================================ */
+
+/* Modalità APP: attiva su telefoni e tablet */
+@media (max-width: 900px),
+       (max-device-width: 1280px),
+       (pointer: coarse),
+       (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+        zoom: 2.1;   /* 210% */
+    }
+
+    .buttons-row button {
+        font-size: 1.4rem;
+        padding: 18px 26px;
+        border-radius: 10px;
+    }
+
+    select {
+        font-size: 1.4rem;
+        padding: 16px 20px;
+        height: auto;
+    }
+
+    .text-box {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .buttons-row {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .container, .section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Modalità Desktop (PC) */
+@media (min-width: 901px) and (pointer: fine) {
+    body {
+        zoom: 1;
+    }
+}
+
+/* ============================
+   FINE MODIFICA - Modalità APP Avanzata
+   File: /index.html
+   Data: 2026-04-13 21:31
+   ============================ */
+
+
+
+/* ============================================================
+   INIZIO MODIFICA - Modalità APP Verticale
+   File: /index.html
+   Sezione: <style>
+   Descrizione:
+       - Modalità APP per smartphone in verticale
+       - Font più grandi
+       - Pulsanti più alti
+       - Tendine più leggibili
+       - Margini ridotti per recuperare spazio verticale
+       - Zoom leggero (non 210%)
+   Data: 2026-04-13 22:19
+   ============================================================ */
+
+/* Modalità APP solo in verticale */
+@media (orientation: portrait) and (max-width: 900px) {
+
+    /* Zoom leggero */
+    body {
+        zoom: 1.4;
+    }
+
+    /* Titoli più grandi */
+    h1, h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* Pulsanti più grandi e alti */
+    .buttons-row button {
+        font-size: 1.6rem;
+        padding: 22px 28px;
+        border-radius: 12px;
+    }
+
+    /* Tendine più alte e leggibili */
+    select {
+        font-size: 1.6rem;
+        padding: 20px 24px;
+        height: auto;
+    }
+
+    /* Testo più grande nei box */
+    .text-box {
+        font-size: 1.7rem;
+        padding: 22px;
+    }
+
+    /* Centrare i pulsanti */
+    .buttons-row {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    /* Margini ridotti per recuperare spazio verticale */
+    .container, .section {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ============================
+   FINE MODIFICA - Modalità APP Verticale
+   File: /index.html
+   Data: 2026-04-13 22:19
+   ============================ */
+
+	
+
+
+/* ============================================================
+   INIZIO MODIFICA - Modalità APP Touch
+   File: /index.html
+   Sezione: <style>
+   Descrizione:
+       - Modalità APP attiva su tutti i dispositivi touch
+       - Funziona anche se il telefono simula modalità desktop
+       - Font più grandi
+       - Pulsanti più alti
+       - Tendine più leggibili
+       - Zoom leggero
+   Data: 2026-04-13 22:29
+   ============================================================ */
+
+/* Modalità APP per dispositivi touch (smartphone/tablet) */
+@media (pointer: coarse) {
+
+    /* Zoom leggero */
+    body {
+        zoom: 1.5;
+    }
+
+    /* Titoli più grandi */
+    h1, h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* Pulsanti più grandi */
+    .buttons-row button {
+        font-size: 1.6rem;
+        padding: 22px 28px;
+        border-radius: 12px;
+    }
+
+    /* Tendine più alte */
+    select {
+        font-size: 1.6rem;
+        padding: 20px 24px;
+        height: auto;
+    }
+
+    /* Testo più grande nei box */
+    .text-box {
+        font-size: 1.7rem;
+        padding: 22px;
+    }
+
+    /* Centrare i pulsanti */
+    .buttons-row {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    /* Margini ridotti */
+    .container, .section {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ============================
+   FINE MODIFICA - Modalità APP Touch
+   File: /index.html
+   Data: 2026-04-13 22:29
+   ============================ */
+
+
+	
+
+
+	
 </style>
 </head>
 
