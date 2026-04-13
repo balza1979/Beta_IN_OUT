@@ -156,62 +156,60 @@ h2 {
     border-color: #ff4d4d;
     color: white;
 }
-/* ============================================================
-   INIZIO MODIFICA - Modalità APP
+//* ============================================================
+   INIZIO MODIFICA - Modalità APP Avanzata
    File: /index.html
    Sezione: <style>
    Descrizione:
-       - Modalità APP per tablet e smartphone
-       - Zoom 210% solo su schermi piccoli
-       - Pulsanti più grandi e centrati
-       - Tendine più alte e leggibili
-       - Testo più grande nei box
-       - Titoli più leggibili
-       - Margini più ampi
-   Data: 2026-04-13 21:26
+       - Modalità APP per smartphone e tablet
+       - Attivazione su:
+            * max-width 900px
+            * device-width < 1280px
+            * high DPI (device pixel ratio >= 2)
+       - Zoom 210%
+       - Pulsanti più grandi
+       - Tendine più alte
+       - Testo più leggibile
+   Data: 2026-04-13 21:31
    ============================================================ */
 
-/* Modalità APP per schermi piccoli (tablet / smartphone) */
-@media (max-width: 900px) {
+/* Modalità APP: attiva su telefoni e tablet */
+@media (max-width: 900px),
+       (max-device-width: 1280px),
+       (pointer: coarse),
+       (-webkit-min-device-pixel-ratio: 2) {
 
-    /* Zoom generale dell'interfaccia */
     body {
         zoom: 2.1;   /* 210% */
     }
 
-    /* Pulsanti più grandi e touch-friendly */
     .buttons-row button {
         font-size: 1.4rem;
         padding: 18px 26px;
         border-radius: 10px;
     }
 
-    /* Tendine più alte e leggibili */
     select {
         font-size: 1.4rem;
         padding: 16px 20px;
         height: auto;
     }
 
-    /* Testo più grande nei box */
     .text-box {
         font-size: 1.5rem;
         padding: 20px;
     }
 
-    /* Titoli più leggibili e centrati */
     h1, h2 {
         font-size: 2rem;
         text-align: center;
     }
 
-    /* Centrare i pulsanti */
     .buttons-row {
         justify-content: center;
         gap: 12px;
     }
 
-    /* Margini più ampi per migliorare la leggibilità */
     .container, .section {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -219,16 +217,16 @@ h2 {
 }
 
 /* Modalità Desktop (PC) */
-@media (min-width: 901px) {
+@media (min-width: 901px) and (pointer: fine) {
     body {
-        zoom: 1;   /* Normale su PC */
+        zoom: 1;
     }
 }
 
 /* ============================
-   FINE MODIFICA - Modalità APP
+   FINE MODIFICA - Modalità APP Avanzata
    File: /index.html
-   Data: 2026-04-13 21:26
+   Data: 2026-04-13 21:31
    ============================ */
 </style>
 </head>
