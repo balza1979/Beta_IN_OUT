@@ -5,10 +5,7 @@
 <title>GESTIONE IN/OUT</title>
 
 <style>
-/* ======== zoom per app ======== */
-body {
-    zoom: 2.2;   /* 140% */
-}
+
 
 
 /* ======== CONTENITORE CENTRALE ======== */
@@ -159,7 +156,80 @@ h2 {
     border-color: #ff4d4d;
     color: white;
 }
+/* ============================================================
+   INIZIO MODIFICA - Modalità APP
+   File: /index.html
+   Sezione: <style>
+   Descrizione:
+       - Modalità APP per tablet e smartphone
+       - Zoom 210% solo su schermi piccoli
+       - Pulsanti più grandi e centrati
+       - Tendine più alte e leggibili
+       - Testo più grande nei box
+       - Titoli più leggibili
+       - Margini più ampi
+   Data: 2026-04-13 21:26
+   ============================================================ */
 
+/* Modalità APP per schermi piccoli (tablet / smartphone) */
+@media (max-width: 900px) {
+
+    /* Zoom generale dell'interfaccia */
+    body {
+        zoom: 2.1;   /* 210% */
+    }
+
+    /* Pulsanti più grandi e touch-friendly */
+    .buttons-row button {
+        font-size: 1.4rem;
+        padding: 18px 26px;
+        border-radius: 10px;
+    }
+
+    /* Tendine più alte e leggibili */
+    select {
+        font-size: 1.4rem;
+        padding: 16px 20px;
+        height: auto;
+    }
+
+    /* Testo più grande nei box */
+    .text-box {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    /* Titoli più leggibili e centrati */
+    h1, h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Centrare i pulsanti */
+    .buttons-row {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Margini più ampi per migliorare la leggibilità */
+    .container, .section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Modalità Desktop (PC) */
+@media (min-width: 901px) {
+    body {
+        zoom: 1;   /* Normale su PC */
+    }
+}
+
+/* ============================
+   FINE MODIFICA - Modalità APP
+   File: /index.html
+   Data: 2026-04-13 21:26
+   ============================ */
 </style>
 </head>
 
