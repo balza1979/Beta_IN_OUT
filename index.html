@@ -360,6 +360,61 @@ h2 {
    File: /index.html
    Data: 2026-04-13 22:29
    ============================ */
+	/* ============================================================
+   INIZIO MODIFICA - Sequenza campi e compattazione
+   File: /index.html
+   Sezione: <style>
+   Descrizione:
+       - Forza l'ordine verticale dei blocchi
+       - Avvicina PARAMETRO e DEF
+       - Riduce gli spazi tra titoli, tendine e campi grigi
+       - Ottimizzato per smartphone in verticale
+   Data: 2026-04-13 22:40
+   ============================================================ */
+
+/* Tutti i blocchi in colonna, senza spazi inutili */
+.section, .container, .block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* distanza minima tra elementi */
+}
+
+/* Titoli più vicini ai loro elementi */
+h1, h2 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* Tendine vicine ai titoli */
+select {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* Campi grigi più compatti */
+.text-box {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+/* Pulsanti vicini al campo */
+.buttons-row {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* Avvicina PARAMETRO e DEF */
+#parametro-section,
+#def-section {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+/* ============================
+   FINE MODIFICA - Sequenza campi e compattazione
+   File: /index.html
+   Data: 2026-04-13 22:40
+   ============================ */
 </style>
 </head>
 
