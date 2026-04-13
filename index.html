@@ -228,6 +228,72 @@ h2 {
    File: /index.html
    Data: 2026-04-13 21:31
    ============================ */
+	/* ============================================================
+   INIZIO MODIFICA - Modalità APP Verticale
+   File: /index.html
+   Sezione: <style>
+   Descrizione:
+       - Modalità APP per smartphone in verticale
+       - Font più grandi
+       - Pulsanti più alti
+       - Tendine più leggibili
+       - Margini ridotti per recuperare spazio verticale
+       - Zoom leggero (non 210%)
+   Data: 2026-04-13 22:19
+   ============================================================ */
+
+/* Modalità APP solo in verticale */
+@media (orientation: portrait) and (max-width: 900px) {
+
+    /* Zoom leggero */
+    body {
+        zoom: 1.4;
+    }
+
+    /* Titoli più grandi */
+    h1, h2 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* Pulsanti più grandi e alti */
+    .buttons-row button {
+        font-size: 1.6rem;
+        padding: 22px 28px;
+        border-radius: 12px;
+    }
+
+    /* Tendine più alte e leggibili */
+    select {
+        font-size: 1.6rem;
+        padding: 20px 24px;
+        height: auto;
+    }
+
+    /* Testo più grande nei box */
+    .text-box {
+        font-size: 1.7rem;
+        padding: 22px;
+    }
+
+    /* Centrare i pulsanti */
+    .buttons-row {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    /* Margini ridotti per recuperare spazio verticale */
+    .container, .section {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ============================
+   FINE MODIFICA - Modalità APP Verticale
+   File: /index.html
+   Data: 2026-04-13 22:19
+   ============================ */
 </style>
 </head>
 
